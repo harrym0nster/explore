@@ -86,6 +86,50 @@ namespace myTiles {
     export const tile41 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile42 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile43 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile44 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile45 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile46 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile47 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile48 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile49 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile50 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile51 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile52 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile53 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile54 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile55 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile56 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile57 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile58 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile59 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile60 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile61 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile62 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile63 = image.ofBuffer(hex``);
+    //% fixedInstance jres blockIdentity=images._tile
+    export const tile64 = image.ofBuffer(hex``);
 
     helpers._registerFactory("tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
@@ -166,24 +210,43 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 `, [myTiles.transparency16,myTiles.tile12,myTiles.tile15,myTiles.tile16,myTiles.tile17,myTiles.tile18,myTiles.tile19,myTiles.tile20,myTiles.tile21,myTiles.tile22,myTiles.tile26,myTiles.tile28,myTiles.tile29], TileScale.Sixteen);
             case "level5":
-            case "level5":return tiles.createTilemap(hex`10001000010103010303020204040404090808080302020202020202040202020507070702020202020202020402020209070707020202020202020204020202040404040202020202020202040202020908080802020202020202020402020205070707020202020202020204020202090707070202020202020202040202020404040402020202020202020402020209080808020202020202020204020202050707070202020202020202040202020907070702020202020202040402020204040404020202020202020206020b0202040707020202020202020404020b0202040707020202020202020204020b0202040a0702020202020202020404040404040404`, img`
+            case "level5":return tiles.createTilemap(hex`1000100001010301030303030404040409080808030202020203030d04020202050707070f02020202020d0d04020202090707070f02020202020d0d0402020204040404030302020202030d04020202090808080302020202020303040202020c070707100202020202020e04020202090707071010020202020e0e0402020204040404100202020202020e0402020209080808030202020202020e04020202050707070303020202020203040202020907070703020202020202040402020204040404111102020202020206020b0202040707111102020202020404020b0202040707110202020202020204020b0202040a0702020202020202020404040404040404`, img`
+. . 2 . 2 2 2 2 2 2 2 2 2 2 2 2 
+2 . . . . 2 2 . 2 . . . 2 . . . 
+. . . . . . . . 2 . . . 2 . . . 
+. . . . . . . . 2 . . . 2 2 2 2 
+2 2 . . . . 2 . 2 . . . 2 . . . 
+2 . . . . . 2 2 2 . . . . . . . 
+. . . . . . . . 2 . . . 2 . . . 
+. . . . . . . . 2 . . . 2 2 . . 
+. . . . . . . . 2 . . . 2 2 . 2 
+2 . . . . . . . 2 . . . 2 . . . 
+2 2 . . . . . 2 2 . . . 2 . . . 
+2 . . . . . . 2 2 . . . 2 2 . . 
+. . . . . . . . . . 2 . . 2 . . 
+. . . . . . . 2 2 . 2 . . 2 . . 
+. . . . . . . . 2 . 2 . . 2 . . 
+. . . . . . . . 2 2 2 2 2 2 2 2 
+`, [myTiles.transparency16,myTiles.tile32,myTiles.tile36,myTiles.tile37,sprites.dungeon.floorLight0,sprites.dungeon.doorLockedEast,myTiles.tile38,sprites.dungeon.floorLight1,myTiles.tile41,sprites.dungeon.doorClosedWest,sprites.dungeon.collectibleRedCrystal,myTiles.tile42,sprites.dungeon.doorOpenEast,myTiles.tile30,myTiles.tile31,myTiles.tile33,myTiles.tile34,myTiles.tile35], TileScale.Sixteen);
+            case "level6":
+            case "level6":return tiles.createTilemap(hex`10001000010101010101010101010101010101010101010108020202070707010101010101010101020202020307070101010101010101010a0402020507060101010101010101010905020205070701010101010101010101010202010101010101010101010101010102020101011211020202010101010101020202020202020202020101010101010202020202020202020201020202020202020101011010100202010202020202020202010102020202020110101002010102020101131302020201020202020101020201010110100210010c0c0c020101020201020202020d02010b0b0b020101020202020202020e0201020202020101020203020202020f02`, img`
 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 
-2 . . . . . . . 2 . . . . . . 2 
-2 . . . . . . . 2 . . . 2 . . 2 
-2 . . . . . . . 2 . . . 2 2 2 2 
-2 . . . . . . . 2 . . . 2 . . 2 
-2 . . . . . . . 2 . . . . . . 2 
-2 . . . . . . . 2 . . . 2 . . 2 
-2 . . . . . . . 2 . . . 2 2 . 2 
-2 . . . . . . . 2 . . . 2 . . 2 
-2 . . . . . . . 2 . . . 2 . . 2 
-2 . . . . . . . 2 . . . 2 . . 2 
-2 . . . . . . 2 2 . . . 2 2 . 2 
-2 . . . . . . . . . 2 . . 2 . 2 
-2 . . . . . . 2 2 . 2 . . 2 . 2 
-2 . . . . . . . 2 . 2 . . 2 . 2 
-2 . . . . . . . 2 2 2 2 2 2 2 2 
-`, [myTiles.transparency16,myTiles.tile32,myTiles.tile36,myTiles.tile37,sprites.dungeon.floorLight0,sprites.dungeon.doorLockedEast,myTiles.tile38,sprites.dungeon.floorLight1,myTiles.tile41,sprites.dungeon.doorClosedWest,sprites.dungeon.collectibleRedCrystal,myTiles.tile42], TileScale.Sixteen);
+2 2 2 2 2 . . . . . . 2 2 2 2 2 
+2 2 2 2 . . . . 2 . . 2 2 2 2 2 
+2 2 2 2 . 2 . . 2 . . 2 2 2 2 2 
+2 2 2 2 2 2 . . 2 . . 2 2 2 2 2 
+2 2 2 2 2 2 . . 2 2 2 2 2 2 2 2 
+2 2 2 2 2 2 . . 2 2 2 . . . . . 
+2 2 2 2 2 2 . . . . . . . . . . 
+2 2 2 2 2 2 . . . . . . . . . . 
+2 . . . . . . . 2 2 2 2 2 2 . . 
+2 . . . . . . . . 2 2 . . . . . 
+2 2 2 2 . 2 2 . . 2 2 2 2 . . . 
+2 . . . . 2 2 . . 2 2 2 2 2 . 2 
+2 . . . . 2 2 . . 2 . . . . . . 
+2 2 2 2 . 2 2 . . . . . . . . . 
+2 . . . . 2 2 . . 2 . . . . 2 . 
+`, [myTiles.transparency16,myTiles.tile43,myTiles.tile44,myTiles.tile45,myTiles.tile46,myTiles.tile47,myTiles.tile49,myTiles.tile50,myTiles.tile51,myTiles.tile52,myTiles.tile53,myTiles.tile54,myTiles.tile56,myTiles.tile57,myTiles.tile58,myTiles.tile59,myTiles.tile61,myTiles.tile62,myTiles.tile63,myTiles.tile64], TileScale.Sixteen);
         }
         return null;
     })
@@ -271,6 +334,50 @@ namespace myTiles {
             case "tile41":return tile41;
             case "tile52":
             case "tile42":return tile42;
+            case "tile57":
+            case "tile43":return tile43;
+            case "tile58":
+            case "tile44":return tile44;
+            case "tile59":
+            case "tile45":return tile45;
+            case "tile60":
+            case "tile46":return tile46;
+            case "tile61":
+            case "tile47":return tile47;
+            case "tile62":
+            case "tile48":return tile48;
+            case "tile63":
+            case "tile49":return tile49;
+            case "tile64":
+            case "tile50":return tile50;
+            case "tile65":
+            case "tile51":return tile51;
+            case "tile66":
+            case "tile52":return tile52;
+            case "tile67":
+            case "tile53":return tile53;
+            case "tile68":
+            case "tile54":return tile54;
+            case "tile69":
+            case "tile55":return tile55;
+            case "tile70":
+            case "tile56":return tile56;
+            case "tile71":
+            case "tile57":return tile57;
+            case "tile72":
+            case "tile58":return tile58;
+            case "tile73":
+            case "tile59":return tile59;
+            case "tile74":
+            case "tile60":return tile60;
+            case "tile75":
+            case "tile61":return tile61;
+            case "tile76":
+            case "tile62":return tile62;
+            case "tile77":
+            case "tile63":return tile63;
+            case "tile78":
+            case "tile64":return tile64;
         }
         return null;
     })

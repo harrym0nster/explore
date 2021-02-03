@@ -61,6 +61,10 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile26`, function (sprite, lo
         . . . . f f . . f f . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Enemy)
+    prisoner1.setVelocity(-39, 60)
+    prisoner2.setVelocity(15, 99)
+    prisoner1.setBounceOnWall(true)
+    prisoner2.setBounceOnWall(true)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
     tiles.setTilemap(tilemap`level4`)
@@ -85,6 +89,11 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
         . . . . . . 5 5 . . 5 5 . . . . 
         `, SpriteKind.Player)
     beach_dude.follow(mySprite, "you might want to check the mountain for a secret passage ".length)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, function (sprite, location) {
+    tiles.setTilemap(tilemap`level6`)
+    prisoner1.destroy()
+    prisoner2.destroy()
 })
 let prisoner2: Sprite = null
 let prisoner1: Sprite = null
