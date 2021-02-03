@@ -23,6 +23,44 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile4`, function (sprite, loc
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`tile26`, function (sprite, location) {
     tiles.setTilemap(tilemap`level5`)
+    beach_dude.destroy()
+    CurrentLevel = 4
+    prisoner1 = sprites.create(img`
+        . . . . f f f f f f . . . . . . 
+        . . . . 1 f d d f 1 . . . . . . 
+        . . . . d d d d d d . . . . . . 
+        . . . . d d f d d d . . . . . . 
+        . . 4 4 4 4 4 4 4 4 4 4 . . . . 
+        . . d d 4 4 4 4 4 4 d d . . . . 
+        . . d d 4 4 4 4 4 4 d d . . . . 
+        . . d d 4 4 4 4 4 4 d d . . . . 
+        . . d d 4 4 4 4 4 4 d d . . . . 
+        . . . . 4 4 4 4 4 4 . . . . . . 
+        . . . . 4 4 . . 4 4 . . . . . . 
+        . . . . 4 4 . . 4 4 . . . . . . 
+        . . . . 4 4 . . 4 4 . . . . . . 
+        . . . . 4 4 . . 4 4 . . . . . . 
+        . . . . f f . . f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Enemy)
+    prisoner2 = sprites.create(img`
+        . . . . e e e e e e . . . . . . 
+        . . . . 1 f d d f 1 . . . . . . 
+        . . . . d d d d d d . . . . . . 
+        . . . . d d f d d d . . . . . . 
+        . . 4 4 4 4 4 4 4 4 4 4 . . . . 
+        . . d d 4 4 4 4 4 4 d d . . . . 
+        . . d d 4 4 4 4 4 4 d d . . . . 
+        . . d d 4 4 4 4 4 4 d d . . . . 
+        . . d d 4 4 4 4 4 4 d d . . . . 
+        . . . . 4 4 4 4 4 4 . . . . . . 
+        . . . . 4 4 4 4 4 4 . . . . . . 
+        . . . . 4 4 . . 4 4 . . . . . . 
+        . . . . 4 4 . . 4 4 . . . . . . 
+        . . . . 4 4 . . 4 4 . . . . . . 
+        . . . . f f . . f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Enemy)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
     tiles.setTilemap(tilemap`level4`)
@@ -48,6 +86,8 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
         `, SpriteKind.Player)
     beach_dude.follow(mySprite, "you might want to check the mountain for a secret passage ".length)
 })
+let prisoner2: Sprite = null
+let prisoner1: Sprite = null
 let beach_dude: Sprite = null
 let bush: Sprite = null
 let mySprite: Sprite = null
