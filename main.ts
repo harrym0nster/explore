@@ -3,9 +3,30 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile4`, function (sprite, loc
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
     tiles.setTilemap(tilemap`level4`)
+    beach_dude = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . 5 5 5 5 5 5 5 5 . . . . 
+        . 5 5 5 . . . . 5 5 5 5 5 . . . 
+        5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+        5 5 5 5 5 5 5 5 5 5 5 5 5 5 . . 
+        . 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+        5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+        5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 
+        5 5 5 5 5 5 5 5 5 5 5 5 . 5 5 5 
+        5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 . 
+        5 5 5 5 5 5 5 5 5 5 5 5 5 . . . 
+        5 5 5 5 5 5 5 5 5 5 5 5 . . . . 
+        5 5 5 5 5 5 5 5 5 . . . . . . . 
+        5 5 5 . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
+    beach_dude.follow(mySprite, "you might want to check the mountain for a secret passage ".length)
 })
+let beach_dude: Sprite = null
+let mySprite: Sprite = null
 tiles.setTilemap(tilemap`level2`)
-let mySprite = sprites.create(img`
+mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . e e e e e . . . . . . 
