@@ -21,6 +21,27 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile4`, function (sprite, loc
         `, SpriteKind.Player)
     bush.follow(mySprite, 500)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`tile66`, function (sprite, location) {
+    tiles.setTilemap(tilemap`level7`)
+    R2.setImage(img`
+        . . . 1 1 1 1 1 1 . . . . . . . 
+        . . . 1 b b b b 1 . . . . . . . 
+        . . . 1 b b b b 1 . . . . . . . 
+        . . . 1 b b b b 1 . . . . . . . 
+        . 1 1 1 1 b 1 2 8 1 1 . . . . . 
+        . 1 1 1 b 1 1 1 1 1 1 . . . . . 
+        . 1 1 1 1 b 1 1 1 1 1 . . . . . 
+        . 1 1 1 1 1 1 1 1 1 1 . . . . . 
+        . b b 1 1 1 1 1 1 b b . . . . . 
+        . . . 1 1 1 1 1 1 . . . . . . . 
+        . . . 1 1 1 1 1 1 . . . . . . . 
+        . . . 8 1 . . 1 1 . . . . . . . 
+        . . . 1 1 . . 1 1 . . . . . . . 
+        . . . f f . . f f . . . . . . . 
+        . . . f f . . f f . . . . . . . 
+        . . f f f . . f f f . . . . . . 
+        `)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`tile26`, function (sprite, location) {
     tiles.setTilemap(tilemap`level5`)
     mySprite.setImage(img`
@@ -128,6 +149,90 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
         `, SpriteKind.Player)
     beach_dude.follow(mySprite, "you might want to check the mountain for a secret passage ".length)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`tile81`, function (sprite, location) {
+    tiles.setTilemap(tilemap`level8`)
+    mySprite.setImage(img`
+        . . . b b b b b b . . . . . . . 
+        . . . b 4 4 4 4 b . . . . . . . 
+        . . . b 4 4 4 4 b . . . . . . . 
+        . . . b 4 4 4 4 b . . . . . . . 
+        . b b b b 4 4 b b b b . . . . . 
+        . 4 4 b b b b b b 4 4 . . . . . 
+        . b b b b 4 b b b b b . . . . . 
+        . b b b 4 b b b b b b . . . . . 
+        . 4 4 b b 4 b b b 4 4 . . . . . 
+        . . . b b b b b b . . . . . . . 
+        . . . b b b b b b . . . . . . . 
+        . . . 4 4 . . 4 4 . . . . . . . 
+        . . . b b . . b b . . . . . . . 
+        . . . f f . . f f . . . . . . . 
+        . . . f f . . f f . . . . . . . 
+        . . f f f . . f f f . . . . . . 
+        `)
+    R2.destroy()
+    astronaght1.destroy()
+    astronaut2.destroy()
+    lavamonster = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . 2 2 4 2 4 4 2 4 2 . . . 
+        . . . . 2 1 4 2 2 4 2 2 1 . . . 
+        . . . . 1 1 4 4 4 4 4 1 1 . . . 
+        . . . . . 2 4 4 4 2 2 4 . . . . 
+        . . . . . 2 2 2 2 2 2 4 . . . . 
+        . . . . . 4 2 2 4 4 2 2 . . . . 
+        . . . . . 4 4 1 1 1 4 2 . . . . 
+        . . . . . 2 4 1 1 1 4 2 . . . . 
+        . . . . . 2 2 4 2 4 4 4 . . . . 
+        . . . . . 4 4 4 2 2 2 4 . . . . 
+        `, SpriteKind.Player)
+    lavanight = sprites.create(img`
+        . . . . . 4 . . . 4 . . . . . . 
+        . . . . . b b b b b . . . . . . 
+        . . . . . b 4 4 4 b . . . . . . 
+        . . . . . b b 4 b b . . . . . . 
+        . . . . . b b 4 b b . . . . . . 
+        . . . b b b b b b b b b . . . . 
+        . . . 4 4 b 4 4 4 b 4 4 . . . . 
+        . . . 4 4 b 4 4 4 b 4 4 . . . . 
+        . . . b b b 4 4 4 b b b . . . . 
+        . . . b b b b 4 b b b b . . . . 
+        . . . 4 4 b b b b b 4 4 . . . . 
+        . . . . . 4 4 b 4 4 . . . . . . 
+        . . . . . 4 b . b 4 . . . . . . 
+        . . . . . b b . b b . . . . . . 
+        . . . . . b b . b b . . . . . . 
+        . . . . 4 4 4 . 4 4 4 . . . . . 
+        `, SpriteKind.Player)
+    lavasnake = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . d 2 d . . . . . . . . . . . 
+        . . . 2 2 2 . . . 2 2 . . . . . 
+        . . . . 2 4 4 4 4 4 4 4 . . . . 
+        . . . 4 . . . . . . . 4 . . . . 
+        . . 2 2 4 4 4 4 . . 2 4 . . . . 
+        . . 2 4 . . . . 2 2 2 . . . . . 
+        . . . 4 . . . . . . . . . . . . 
+        . . . . 4 4 4 2 2 2 4 . . . . . 
+        . . . . . . . . . . 4 2 2 . . . 
+        . . . . . . . . . . . . 2 4 . . 
+        . . . . . . . 4 4 2 2 4 . 4 . . 
+        . . . . 2 2 4 . . . . 4 4 4 . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Player)
+    lavamonster.setVelocity(24, 74)
+    lavanight.setVelocity(24, 56)
+    lavasnake.setVelocity(39, 44)
+    lavamonster.setBounceOnWall(true)
+    lavanight.setBounceOnWall(true)
+    lavasnake.setBounceOnWall(true)
+})
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, function (sprite, location) {
     tiles.setTilemap(tilemap`level6`)
     prisoner1.destroy()
@@ -171,7 +276,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, fu
         . . . . . . . . . . . . . . . . 
         `)
     astronaght1.setVelocity(24, -13)
-    astronaght1 = sprites.create(img`
+    astronaut2 = sprites.create(img`
         . . . . 1 1 1 1 1 1 . . . . . . 
         . . . . 1 b b b b 1 . . . . . . 
         . . . . 1 b b b b 1 . . . . . . 
@@ -189,8 +294,8 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, fu
         . . . . f f . . f f . . . . . . 
         . . . f f f . . f f f . . . . . 
         `, SpriteKind.Enemy)
-    astronaght1.setVelocity(61, -32)
-    astronaght1.setBounceOnWall(true)
+    astronaut2.setVelocity(61, -32)
+    astronaut2.setBounceOnWall(true)
     R2 = sprites.create(img`
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
@@ -212,12 +317,16 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, fu
     R2.setBounceOnWall(true)
     R2.setVelocity(81, 68)
 })
-let R2: Sprite = null
+let lavasnake: Sprite = null
+let lavanight: Sprite = null
+let lavamonster: Sprite = null
+let astronaut2: Sprite = null
 let astronaght1: Sprite = null
 let POLICE: Sprite = null
 let PRISONER2: Sprite = null
 let prisoner1: Sprite = null
 let beach_dude: Sprite = null
+let R2: Sprite = null
 let bush: Sprite = null
 let mySprite: Sprite = null
 let CurrentLevel = 0
