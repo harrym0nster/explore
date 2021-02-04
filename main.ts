@@ -94,7 +94,46 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, fu
     tiles.setTilemap(tilemap`level6`)
     prisoner1.destroy()
     prisoner2.destroy()
+    astronaght = sprites.create(img`
+        . . . . 1 1 1 1 1 1 . . . . . . 
+        . . . . 1 b b b b 1 . . . . . . 
+        . . . . 1 b b b b 1 . . . . . . 
+        . . . . 1 b b b b 1 . . . . . . 
+        . . . . 1 1 b b 1 1 . . . . . . 
+        b 1 1 1 1 1 1 1 1 1 1 1 1 b . . 
+        b 1 1 1 1 1 1 1 2 8 1 1 1 b . . 
+        . . . . 1 1 1 b 1 1 . . . . . . 
+        . . . . 1 1 b 1 1 1 . . . . . . 
+        . . . . 1 1 1 b 1 1 . . . . . . 
+        . . . . 1 1 1 1 1 1 . . . . . . 
+        . . . . 1 1 . . 1 1 . . . . . . 
+        . . . . b 1 . . 1 1 . . . . . . 
+        . . . . f f . . f f . . . . . . 
+        . . . . f f . . f f . . . . . . 
+        . . . f f f . . f f f . . . . . 
+        `, SpriteKind.Enemy)
+    astronaght.setBounceOnWall(true)
+    mySprite.setImage(img`
+        . . . . 1 1 1 1 1 1 . . . . . . 
+        . . . . 1 b b b b 1 . . . . . . 
+        . . . . 1 b b b b 1 . . . . . . 
+        . . . . 1 b b b b 1 . . . . . . 
+        b 1 1 1 1 1 b b 2 8 1 1 1 b . . 
+        b 1 1 1 1 1 b 1 1 1 1 1 1 b . . 
+        . . . . 1 b 1 1 1 1 . . . . . . 
+        . . . . 1 1 b 1 1 1 . . . . . . 
+        . . . . 1 1 1 1 1 1 . . . . . . 
+        . . . . 1 1 . . 1 1 . . . . . . 
+        . . . . f f . . f f . . . . . . 
+        . . . . f f . . f f . . . . . . 
+        . . . f f f . . f f f . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `)
+    astronaght.setVelocity(24, -13)
 })
+let astronaght: Sprite = null
 let prisoner2: Sprite = null
 let prisoner1: Sprite = null
 let beach_dude: Sprite = null
