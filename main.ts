@@ -23,6 +23,24 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile4`, function (sprite, loc
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`tile26`, function (sprite, location) {
     tiles.setTilemap(tilemap`level5`)
+    mySprite.setImage(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . f f f f f f . . . . . 
+        . . . . . 1 f d d f 1 . . . . . 
+        . . . . . d d d d d d . . . . . 
+        . . . . . d d f d d d . . . . . 
+        . . . 4 4 4 4 4 4 4 4 4 4 . . . 
+        . . . f d 4 4 4 4 4 4 d f . . . 
+        . . . d f 4 4 4 4 4 4 f d . . . 
+        . . . f d 4 4 4 4 4 4 d d . . . 
+        . . . d d 4 4 4 4 4 4 d d . . . 
+        . . . . . 4 4 4 4 4 4 . . . . . 
+        . . . . . 4 4 . . 4 4 . . . . . 
+        . . . . . 4 4 . . 4 4 . . . . . 
+        . . . . . 4 4 . . 4 4 . . . . . 
+        . . . . . f f . . f f . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `)
     beach_dude.destroy()
     CurrentLevel = 4
     prisoner1 = sprites.create(img`
@@ -43,7 +61,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile26`, function (sprite, lo
         . . . . f f . . f f . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Enemy)
-    prisoner2 = sprites.create(img`
+    PRISONER2 = sprites.create(img`
         . . . . e e e e e e . . . . . . 
         . . . . 1 f d d f 1 . . . . . . 
         . . . . d d d d d d . . . . . . 
@@ -62,9 +80,29 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile26`, function (sprite, lo
         . . . . . . . . . . . . . . . . 
         `, SpriteKind.Enemy)
     prisoner1.setVelocity(-39, 60)
-    prisoner2.setVelocity(15, 99)
+    PRISONER2.setVelocity(15, 99)
     prisoner1.setBounceOnWall(true)
-    prisoner2.setBounceOnWall(true)
+    PRISONER2.setBounceOnWall(true)
+    POLICE = sprites.create(img`
+        . . . 6 6 6 6 6 6 6 . . . . . . 
+        . . . . 1 f d d f 1 . . . . . . 
+        . . . . d d d d d d . . . . . . 
+        . . . . d f f f f d . . . . . . 
+        . . 6 6 6 6 6 6 6 6 6 6 . . . . 
+        . . d d 6 5 6 6 6 6 d d . . . . 
+        . . d d 6 6 6 6 6 6 d d . . . . 
+        . . d d 6 6 6 6 6 6 d d . . . . 
+        . . d d 6 6 6 6 6 6 d d . . . . 
+        . . . . 6 6 6 6 6 6 . . . . . . 
+        . . . . f b b b b f . . . . . . 
+        . . . . b b . . b b . . . . . . 
+        . . . . b b . . b b . . . . . . 
+        . . . . b b . . b b . . . . . . 
+        . . . . f f . . f f . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Enemy)
+    POLICE.setBounceOnWall(true)
+    POLICE.setVelocity(50, 50)
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sprite, location) {
     tiles.setTilemap(tilemap`level4`)
@@ -93,8 +131,9 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.chestClosed, function (sp
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, function (sprite, location) {
     tiles.setTilemap(tilemap`level6`)
     prisoner1.destroy()
-    prisoner2.destroy()
-    astronaght = sprites.create(img`
+    POLICE.destroy()
+    PRISONER2.destroy()
+    astronaght1 = sprites.create(img`
         . . . . 1 1 1 1 1 1 . . . . . . 
         . . . . 1 b b b b 1 . . . . . . 
         . . . . 1 b b b b 1 . . . . . . 
@@ -112,7 +151,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, fu
         . . . . f f . . f f . . . . . . 
         . . . f f f . . f f f . . . . . 
         `, SpriteKind.Enemy)
-    astronaght.setBounceOnWall(true)
+    astronaght1.setBounceOnWall(true)
     mySprite.setImage(img`
         . . . . 1 1 1 1 1 1 . . . . . . 
         . . . . 1 b b b b 1 . . . . . . 
@@ -131,10 +170,52 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, fu
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `)
-    astronaght.setVelocity(24, -13)
+    astronaght1.setVelocity(24, -13)
+    astronaght1 = sprites.create(img`
+        . . . . 1 1 1 1 1 1 . . . . . . 
+        . . . . 1 b b b b 1 . . . . . . 
+        . . . . 1 b b b b 1 . . . . . . 
+        . . . . 1 b b b b 1 . . . . . . 
+        . . . . 1 1 b b 1 1 . . . . . . 
+        b 1 1 1 1 1 1 1 1 1 1 1 1 b . . 
+        b 1 1 1 1 1 1 1 2 8 1 1 1 b . . 
+        . . . . 1 1 1 b 1 1 . . . . . . 
+        . . . . 1 1 b 1 1 1 . . . . . . 
+        . . . . 1 1 1 b 1 1 . . . . . . 
+        . . . . 1 1 1 1 1 1 . . . . . . 
+        . . . . 1 1 . . 1 1 . . . . . . 
+        . . . . b 1 . . 1 1 . . . . . . 
+        . . . . f f . . f f . . . . . . 
+        . . . . f f . . f f . . . . . . 
+        . . . f f f . . f f f . . . . . 
+        `, SpriteKind.Enemy)
+    astronaght1.setVelocity(61, -32)
+    astronaght1.setBounceOnWall(true)
+    R2 = sprites.create(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . . f . . . . . . . 
+        . . . . . . . f . . . . . . . . 
+        . . . . . 8 f 8 8 8 . . . . . . 
+        . . . . . 8 8 8 2 8 . . . . . . 
+        . . . . 8 8 8 8 8 8 8 . . . . . 
+        . . . . 1 1 1 1 1 1 1 . . . . . 
+        . . . . b 1 1 1 1 1 b . . . . . 
+        . . . . b 1 1 b 1 1 b . . . . . 
+        . . . . b 1 1 b 1 1 b . . . . . 
+        . . . . b 1 1 b 1 1 b . . . . . 
+        . . . b b . b b b . b b . . . . 
+        . . . . . . . . . . . . . . . . 
+        `, SpriteKind.Enemy)
+    R2.setBounceOnWall(true)
+    R2.setVelocity(81, 68)
 })
-let astronaght: Sprite = null
-let prisoner2: Sprite = null
+let R2: Sprite = null
+let astronaght1: Sprite = null
+let POLICE: Sprite = null
+let PRISONER2: Sprite = null
 let prisoner1: Sprite = null
 let beach_dude: Sprite = null
 let bush: Sprite = null
