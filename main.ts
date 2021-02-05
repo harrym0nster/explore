@@ -42,6 +42,9 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile66`, function (sprite, lo
         . . f f f . . f f f . . . . . . 
         `)
 })
+scene.onOverlapTile(SpriteKind.Player, assets.tile`tile100`, function (sprite, location) {
+    tiles.setTilemap(tilemap`level10`)
+})
 scene.onOverlapTile(SpriteKind.Player, assets.tile`tile26`, function (sprite, location) {
     tiles.setTilemap(tilemap`level5`)
     mySprite.setImage(img`
@@ -232,6 +235,30 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`tile81`, function (sprite, lo
     lavamonster.setBounceOnWall(true)
     lavanight.setBounceOnWall(true)
     lavasnake.setBounceOnWall(true)
+})
+scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.buttonOrange, function (sprite, location) {
+    tiles.setTilemap(tilemap`level9`)
+    mySprite.setImage(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . e e e e e . . . . . . 
+        . . . . . d d d d d . . . . . . 
+        . . . . . 1 f d f 1 . . . . . . 
+        . . . . . d d d d d . . . . . . 
+        . . . . 2 2 2 2 2 2 2 . . . . . 
+        . . . . d 2 2 2 2 2 d . . . . . 
+        . . . . d 2 2 2 2 2 d . . . . . 
+        . . . . d 2 2 2 2 2 d . . . . . 
+        . . . . . e e e e e . . . . . . 
+        . . . . . e e . e e . . . . . . 
+        . . . . . b b . b b . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `)
+    lavamonster.destroy()
+    lavanight.destroy()
+    lavasnake.destroy()
 })
 scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.collectibleRedCrystal, function (sprite, location) {
     tiles.setTilemap(tilemap`level6`)
